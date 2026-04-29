@@ -24,6 +24,5 @@ Disarankan menggunakan virtual environment agar dependencies terisolasi dengan b
 
 Masuk ke direktori utama (atau direktori dashboard/ tempat file .py berada) 
 Jalankan perintah berikut:
-
-    ```bash
-    streamlit run dashboard.py
+   ```bash
+   streamlit run dashboard.py
