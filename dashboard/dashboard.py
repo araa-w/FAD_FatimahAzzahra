@@ -35,8 +35,8 @@ def categorize_time(hour):
 hour_df['time_cluster'] = hour_df['hr'].apply(categorize_time)
 
 #fitur batasan tanggal
-min_date = day_df["dteday"].min()
-max_date = day_df["dteday"].max()
+min_date = day_df["dteday"].min().date()
+max_date = day_df["dteday"].max().date()
 
 # membuat dashboard streamlit
 ## judul utama
@@ -65,7 +65,6 @@ with st.sidebar:
         label = 'Rentang Waktu',
         min_value = min_date,
         max_value = max_date,
-        value = st.session_state.date_filter,
         key = 'date_filter'
     )
 
@@ -75,7 +74,7 @@ if len(date_range) == 2:
 else:
     start_date, end_date = date_range[0], date_range[0]
 
-main_df = day_df[(day_df["dteday"] >= str(start_date)) & (day_df["dteday"] <= str(end_date))]
+main_df = day_df[(day_df["dteday"].dt.date >= start_date) & (day_df["dteday"].dt.date <= end_date)]
 
 ## membuat metrik ringkasan
 st.subheader('Daily Data Overview')
