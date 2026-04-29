@@ -6,8 +6,8 @@ import streamlit as st
 sns.set_theme(style='dark')
 
 # menyiapkan dan membaca data
-day_df = pd.read_csv('day.csv')
-hour_df = pd.read_csv('hour.csv')
+day_df = pd.read_csv('dashboard/day.csv')
+hour_df = pd.read_csv('dashboard/hour.csv')
 
 # membersihkan data dan modifikasi persis di notebook
 day_df['dteday'] = pd.to_datetime(day_df['dteday'])
