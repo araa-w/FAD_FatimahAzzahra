@@ -17,11 +17,13 @@ Disarankan menggunakan virtual environment agar dependencies terisolasi dengan b
 - Mac/Linux: source venv/bin/activate
 
 4. Install library yang dibutuhkan
-
-pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
 
 ## Run Streamlit App
 
-Masuk ke direktori utama (atau direktori dashboard/ tempat file .py berada) Jalankan perintah berikut:
+Masuk ke direktori utama (atau direktori dashboard/ tempat file .py berada) 
+Jalankan perintah berikut:
 
-streamlit run dashboard.py
+    ```bash
+    streamlit run dashboard.py
