@@ -84,9 +84,9 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.metric('Total Rides', value = f"{main_df['cnt'].sum():,}")
 with col2:
-    st.metric('Registered Users', value = f"{main_df['cnt'].sum():,}")
+    st.metric('Registered Users', value = f"{main_df['registered'].sum():,}")
 with col3:
-    st.metric('Casual Users', value = f"{main_df['cnt'].sum():,}")
+    st.metric('Casual Users', value = f"{main_df['casual'].sum():,}")
 
 st.markdown('---')
 
